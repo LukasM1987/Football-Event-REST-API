@@ -9,6 +9,7 @@ import com.event.football_event.mapper.CompetitorMapper;
 import com.event.football_event.mapper.EventMapper;
 import com.event.football_event.mapper.TournamentMapper;
 import com.event.football_event.mapper.VenueMapper;
+import com.event.football_event.output.Result;
 import com.event.football_event.service.DbService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -20,9 +21,10 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class TournamentController {
 
+    private static final Result result = new Result();
+
     private final DbService dbService;
     private final TournamentMapper tournamentMapper;
-
     private final EventMapper eventMapper;
     private final CompetitorMapper competitorMapper;
     private final VenueMapper venueMapper;
@@ -38,8 +40,11 @@ public class TournamentController {
                 Competitor competitor = competitorMapper.mapToCompetitor(tournamentDto, i, j);
                 dbService.saveCompetitor(competitor);
             }
-            Venue venue = venueMapper.mapToVenue(tournamentDto, i);
-            dbService.saveVenue(venue);
+            if (tournamentDto.getEvents().get(i).getVenue() != null) {
+                Venue venue = venueMapper.mapToVenue(tournamentDto, i);
+                dbService.saveVenue(venue);
+            }
         }
+        result.compareCompetitors(tournamentDto);
     }
 }

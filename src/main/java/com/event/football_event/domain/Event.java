@@ -24,8 +24,8 @@ public class Event {
     private String sport_event_id;
 
     @NotNull
-    @Column(name = "SPORT_EVENT_DATE")
-    private LocalDateTime sport_event_date;
+    @Column(name = "START_DATE")
+    private String start_date;
 
     @NotNull
     @Column(name = "SPORT_NAME")
@@ -65,9 +65,9 @@ public class Event {
     @JoinColumn(name = "TOURNAMENT_ID")
     private Tournament tournament;
 
-    public Event(String sport_event_id, LocalDateTime sport_event_date, String sport_name, String competition_name, String competition_id, String season_name, double probability_home_team_winner, double probability_draw, double probability_away_team_winner) {
+    public Event(String sport_event_id, String start_date, String sport_name, String competition_name, String competition_id, String season_name, double probability_home_team_winner, double probability_draw, double probability_away_team_winner) {
         this.sport_event_id = sport_event_id;
-        this.sport_event_date = sport_event_date;
+        this.start_date = start_date;
         this.sport_name = sport_name;
         this.competition_name = competition_name;
         this.competition_id = competition_id;

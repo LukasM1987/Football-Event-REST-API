@@ -38,8 +38,8 @@ public class Venue {
     private String country_name;
 
     @NotNull
-    @Column(name = "MAP_COORDINATE")
-    private String map_coordinate;
+    @Column(name = "MAP_COORDINATES")
+    private String map_coordinates;
 
     @NotNull
     @Column(name = "COUNTRY_CODE")
@@ -49,13 +49,13 @@ public class Venue {
     @JoinColumn(name = "SPORT_EVENT_ID")
     private Event event;
 
-    public Venue(String id, String name, int capacity, String city_name, String country_name, String map_coordinate, String country_code) {
+    public Venue(String id, String name, int capacity, String city_name, String country_name, String map_coordinates, String country_code) {
         this.id = id;
         this.name = name;
         this.capacity = capacity;
         this.city_name = city_name;
         this.country_name = country_name;
-        this.map_coordinate = map_coordinate;
+        this.map_coordinates = map_coordinates;
         this.country_code = country_code;
     }
 }

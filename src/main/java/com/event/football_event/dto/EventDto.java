@@ -20,8 +20,8 @@ public class EventDto {
     @JsonProperty("sport_event_id")
     private String sport_event_id;
 
-    @JsonProperty("sport_event_date")
-    private LocalDateTime sport_event_date;
+    @JsonProperty("start_date")
+    private String start_date;
 
     @JsonProperty("sport_name")
     private String sport_name;
