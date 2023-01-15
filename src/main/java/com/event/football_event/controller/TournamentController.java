@@ -21,13 +21,13 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class TournamentController {
 
-    private static final Result result = new Result();
-
     private final DbService dbService;
     private final TournamentMapper tournamentMapper;
     private final EventMapper eventMapper;
     private final CompetitorMapper competitorMapper;
     private final VenueMapper venueMapper;
+
+    private Result result;
 
     @RequestMapping(method = RequestMethod.POST, value = "addTournament", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addTournament(@RequestBody final TournamentDto tournamentDto) {
@@ -45,6 +45,7 @@ public class TournamentController {
                 dbService.saveVenue(venue);
             }
         }
+        result = new Result();
         result.compareCompetitors(tournamentDto);
     }
 }
