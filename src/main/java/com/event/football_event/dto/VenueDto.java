@@ -29,8 +29,8 @@ public class VenueDto {
     @JsonProperty("country_name")
     private String country_name;
 
-    @JsonProperty("map_coordinate")
-    private String map_coordinate;
+    @JsonProperty("map_coordinates")
+    private String map_coordinates;
 
     @JsonProperty("country_code")
     private String country_code;

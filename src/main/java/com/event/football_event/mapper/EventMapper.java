@@ -10,7 +10,7 @@ public class EventMapper {
     public Event mapToEvent(final TournamentDto tournamentDto, final int size) {
             return new Event(
                     tournamentDto.getEvents().get(size).getSport_event_id(),
-                    tournamentDto.getEvents().get(size).getSport_event_date(),
+                    tournamentDto.getEvents().get(size).getStart_date(),
                     tournamentDto.getEvents().get(size).getSport_name(),
                     tournamentDto.getEvents().get(size).getCompetition_name(),
                     tournamentDto.getEvents().get(size).getCompetition_id(),

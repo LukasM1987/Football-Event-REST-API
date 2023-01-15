@@ -14,7 +14,7 @@ public class VenueMapper {
                     tournamentDto.getEvents().get(size).getVenue().getCapacity(),
                     tournamentDto.getEvents().get(size).getVenue().getCity_name(),
                     tournamentDto.getEvents().get(size).getVenue().getCountry_name(),
-                    tournamentDto.getEvents().get(size).getVenue().getMap_coordinate(),
+                    tournamentDto.getEvents().get(size).getVenue().getMap_coordinates(),
                     tournamentDto.getEvents().get(size).getVenue().getCountry_code()
             );
     }
