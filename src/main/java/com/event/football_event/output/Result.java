@@ -13,6 +13,7 @@ public class Result {
     private static final int AWAY_TEAM = 1;
     private static final int DATE_LENGTH = 19;
     private static final String BLUE = "\033[0;34m";
+    private static final String RESET = "\033[0m";
     private static final List<String> teams = new ArrayList<>();
 
     private int range;
@@ -80,12 +81,12 @@ public class Result {
             case 0:
                 System.out.println(BLUE + "{Event: " + homeTeam + " VS. " + awayTeam +
                         ", Where: " + city + ", " + stadium + ", When: " + date.substring(0, DATE_LENGTH) +
-                        ", Skirmish Result: " + winner + " probably will be the winner.}");
+                        ", Skirmish Result: " + winner + " probably will be the winner.}" + RESET);
                 break;
             case 1:
                 System.out.println(BLUE + "{Event: " + homeTeam + " VS. " + awayTeam +
                         ", Where: " + city + ", " + stadium + ", When: " + date.substring(0, DATE_LENGTH) +
-                        ", Skirmish Result: Probably will be draw.}");
+                        ", Skirmish Result: Probably will be draw.}" + RESET);
                 break;
         }
     }
@@ -95,12 +96,12 @@ public class Result {
             case 0:
                 System.out.println(BLUE + "{Event: " + homeTeam + " VS. " + awayTeam +
                         ", When: " + date.substring(0, DATE_LENGTH) +
-                        ", Skirmish Result: " + winner + " probably will be the winner.}");
+                        ", Skirmish Result: " + winner + " probably will be the winner.}" + RESET);
                 break;
             case 1:
                 System.out.println(BLUE + "{Event: " + homeTeam + " VS. " + awayTeam +
                         ", When: " + date.substring(0, DATE_LENGTH) +
-                        ", Skirmish Result: Probably will be draw.}");
+                        ", Skirmish Result: Probably will be draw.}" + RESET);
                 break;
         }
     }
