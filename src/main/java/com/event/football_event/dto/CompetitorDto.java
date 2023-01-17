@@ -21,7 +21,7 @@ public class CompetitorDto {
     private String country;
 
     @JsonProperty("country_code")
-    private String country_code;
+    private String countryCode;
 
     @JsonProperty("abbreviation")
     private String abbreviation;

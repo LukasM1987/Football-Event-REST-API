@@ -24,14 +24,14 @@ public class VenueDto {
     private int capacity;
 
     @JsonProperty("city_name")
-    private String city_name;
+    private String cityName;
 
     @JsonProperty("country_name")
-    private String country_name;
+    private String countryName;
 
     @JsonProperty("map_coordinates")
-    private String map_coordinates;
+    private String mapCoordinates;
 
     @JsonProperty("country_code")
-    private String country_code;
+    private String countryCode;
 }
