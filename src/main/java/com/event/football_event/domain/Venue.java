@@ -31,31 +31,31 @@ public class Venue {
 
     @NotNull
     @Column(name = "CITY_NAME")
-    private String city_name;
+    private String cityName;
 
     @NotNull
     @Column(name = "COUNTRY_NAME")
-    private String country_name;
+    private String countryName;
 
     @NotNull
     @Column(name = "MAP_COORDINATES")
-    private String map_coordinates;
+    private String mapCoordinates;
 
     @NotNull
     @Column(name = "COUNTRY_CODE")
-    private String country_code;
+    private String countryCode;
 
     @ManyToOne
     @JoinColumn(name = "SPORT_EVENT_ID")
     private Event event;
 
-    public Venue(String id, String name, int capacity, String city_name, String country_name, String map_coordinates, String country_code) {
+    public Venue(String id, String name, int capacity, String cityName, String countryName, String mapCoordinates, String countryCode) {
         this.id = id;
         this.name = name;
         this.capacity = capacity;
-        this.city_name = city_name;
-        this.country_name = country_name;
-        this.map_coordinates = map_coordinates;
-        this.country_code = country_code;
+        this.cityName = cityName;
+        this.countryName = countryName;
+        this.mapCoordinates = mapCoordinates;
+        this.countryCode = countryCode;
     }
 }

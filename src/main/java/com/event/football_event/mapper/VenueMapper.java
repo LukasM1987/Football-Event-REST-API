@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class VenueMapper {
 
-    public Venue mapToVenue(final TournamentDto tournamentDto, final int size) {
+    public Venue mapToVenue(final TournamentDto tournamentDto, final int i) {
             return new Venue(
-                    tournamentDto.getEvents().get(size).getVenue().getId(),
-                    tournamentDto.getEvents().get(size).getVenue().getName(),
-                    tournamentDto.getEvents().get(size).getVenue().getCapacity(),
-                    tournamentDto.getEvents().get(size).getVenue().getCity_name(),
-                    tournamentDto.getEvents().get(size).getVenue().getCountry_name(),
-                    tournamentDto.getEvents().get(size).getVenue().getMap_coordinates(),
-                    tournamentDto.getEvents().get(size).getVenue().getCountry_code()
+                    tournamentDto.getEvents().get(i).getVenue().getId(),
+                    tournamentDto.getEvents().get(i).getVenue().getName(),
+                    tournamentDto.getEvents().get(i).getVenue().getCapacity(),
+                    tournamentDto.getEvents().get(i).getVenue().getCityName(),
+                    tournamentDto.getEvents().get(i).getVenue().getCountryName(),
+                    tournamentDto.getEvents().get(i).getVenue().getMapCoordinates(),
+                    tournamentDto.getEvents().get(i).getVenue().getCountryCode()
             );
     }
 }

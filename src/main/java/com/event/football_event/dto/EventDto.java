@@ -18,22 +18,22 @@ import java.util.List;
 public class EventDto {
 
     @JsonProperty("sport_event_id")
-    private String sport_event_id;
+    private String sportEventId;
 
     @JsonProperty("start_date")
-    private String start_date;
+    private String startDate;
 
     @JsonProperty("sport_name")
-    private String sport_name;
+    private String sportName;
 
     @JsonProperty("competition_name")
-    private String competition_name;
+    private String competitionName;
 
     @JsonProperty("competition_id")
-    private String competition_id;
+    private String competitionId;
 
     @JsonProperty("season_name")
-    private String season_name;
+    private String seasonName;
 
     @JsonProperty("competitors")
     private List<CompetitorDto> competitors;
@@ -42,11 +42,11 @@ public class EventDto {
     private VenueDto venue;
 
     @JsonProperty("probability_home_team_winner")
-    private double probability_home_team_winner;
+    private double probabilityHomeTeamWinner;
 
     @JsonProperty("probability_draw")
-    private double probability_draw;
+    private double probabilityDraw;
 
     @JsonProperty("probability_away_team_winner;")
-    private double probability_away_team_winner;
+    private double probabilityAwayTeamWinner;
 }

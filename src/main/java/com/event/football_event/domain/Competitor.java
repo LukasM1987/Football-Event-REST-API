@@ -26,7 +26,7 @@ public class Competitor {
 
     @NonNull
     @Column(name = "COUNTRY_CODE")
-    private String country_code;
+    private String countryCode;
 
     @NonNull
     @Column(name = "ABBREVIATION")
@@ -44,11 +44,11 @@ public class Competitor {
     @JoinColumn(name = "SPORT_EVENT_ID")
     private Event event;
 
-    public Competitor(String id, String name, String country, String country_code, String abbreviation, String qualifier, String gender) {
+    public Competitor(String id, String name, String country, String countryCode, String abbreviation, String qualifier, String gender) {
         this.id = id;
         this.name = name;
         this.country = country;
-        this.country_code = country_code;
+        this.countryCode = countryCode;
         this.abbreviation = abbreviation;
         this.qualifier = qualifier;
         this.gender = gender;

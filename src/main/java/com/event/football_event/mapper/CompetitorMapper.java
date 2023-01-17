@@ -12,7 +12,7 @@ public class CompetitorMapper {
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getId(),
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getName(),
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getCountry(),
-                        tournamentDto.getEvents().get(i).getCompetitors().get(j).getCountry_code(),
+                        tournamentDto.getEvents().get(i).getCompetitors().get(j).getCountryCode(),
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getAbbreviation(),
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getQualifier(),
                         tournamentDto.getEvents().get(i).getCompetitors().get(j).getGender()

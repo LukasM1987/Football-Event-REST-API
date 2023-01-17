@@ -35,43 +35,43 @@ public class Result {
     }
 
     private void compareProbabilityWithVenue(TournamentDto tournamentDto, int i) {
-        if (tournamentDto.getEvents().get(i).getProbability_away_team_winner() > tournamentDto.getEvents().get(i).getProbability_home_team_winner()
-                && tournamentDto.getEvents().get(i).getProbability_away_team_winner() > tournamentDto.getEvents().get(i).getProbability_draw()) {
+        if (tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner()
+                && tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityDraw()) {
             printResultWithVenue(SkirmishResult.WIN.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getVenue().getCity_name(),
+                    tournamentDto.getEvents().get(i).getVenue().getCityName(),
                     tournamentDto.getEvents().get(i).getVenue().getName(),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     teams.get(AWAY_TEAM));
-        } else if (tournamentDto.getEvents().get(i).getProbability_home_team_winner() > tournamentDto.getEvents().get(i).getProbability_away_team_winner()
-                && tournamentDto.getEvents().get(i).getProbability_home_team_winner() > tournamentDto.getEvents().get(i).getProbability_draw()) {
+        } else if (tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner()
+                && tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityDraw()) {
             printResultWithVenue(SkirmishResult.WIN.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getVenue().getCity_name(),
+                    tournamentDto.getEvents().get(i).getVenue().getCityName(),
                     tournamentDto.getEvents().get(i).getVenue().getName(),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     teams.get(HOME_TEAM));
         } else {
             printResultWithVenue(SkirmishResult.DRAW.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getVenue().getCity_name(),
+                    tournamentDto.getEvents().get(i).getVenue().getCityName(),
                     tournamentDto.getEvents().get(i).getVenue().getName(),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     null);
         }
     }
 
     private void compareProbabilityWithoutVenue(TournamentDto tournamentDto, int i) {
-        if (tournamentDto.getEvents().get(i).getProbability_away_team_winner() > tournamentDto.getEvents().get(i).getProbability_home_team_winner()
-                && tournamentDto.getEvents().get(i).getProbability_away_team_winner() > tournamentDto.getEvents().get(i).getProbability_draw()) {
+        if (tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner()
+                && tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityDraw()) {
             printResultWithoutVenue(SkirmishResult.WIN.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     teams.get(AWAY_TEAM));
-        } else if (tournamentDto.getEvents().get(i).getProbability_home_team_winner() > tournamentDto.getEvents().get(i).getProbability_away_team_winner()
-                && tournamentDto.getEvents().get(i).getProbability_home_team_winner() > tournamentDto.getEvents().get(i).getProbability_draw()) {
+        } else if (tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityAwayTeamWinner()
+                && tournamentDto.getEvents().get(i).getProbabilityHomeTeamWinner() > tournamentDto.getEvents().get(i).getProbabilityDraw()) {
             printResultWithoutVenue(SkirmishResult.WIN.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     teams.get(HOME_TEAM));
         } else {
             printResultWithoutVenue(SkirmishResult.DRAW.getValue(), teams.get(HOME_TEAM), teams.get(AWAY_TEAM),
-                    tournamentDto.getEvents().get(i).getStart_date(),
+                    tournamentDto.getEvents().get(i).getStartDate(),
                     null);
         }
     }
